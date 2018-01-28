@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F359B1B201D686D00AC6097 /* Settings-Watch.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4F359B1A201D686D00AC6097 /* Settings-Watch.bundle */; };
+		4F359B1C201D686D00AC6097 /* Settings-Watch.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4F359B1A201D686D00AC6097 /* Settings-Watch.bundle */; };
+		4F359B1E201D6E8500AC6097 /* PackageDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F359B1D201D6E8500AC6097 /* PackageDetails.storyboard */; };
 		4F8B340C201BD09300566936 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8B340B201BD09300566936 /* AppDelegate.m */; };
 		4F8B340F201BD09300566936 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8B340E201BD09300566936 /* ViewController.m */; };
 		4F8B3412201BD09300566936 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F8B3410201BD09300566936 /* Main.storyboard */; };
@@ -66,6 +69,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4F359B1A201D686D00AC6097 /* Settings-Watch.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = "Settings-Watch.bundle"; sourceTree = "<group>"; };
+		4F359B1D201D6E8500AC6097 /* PackageDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PackageDetails.storyboard; sourceTree = "<group>"; };
 		4F8B3407201BD09300566936 /* Chronos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chronos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F8B340A201BD09300566936 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4F8B340B201BD09300566936 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -90,6 +95,8 @@
 		4F8B343A201BD09300566936 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F8B343C201BD09300566936 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F8B343D201BD09300566936 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		4F8B344B201BEC4C00566936 /* InstallInterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InstallInterfaceController.h; sourceTree = "<group>"; };
+		4F8B344C201BEC4C00566936 /* InstallInterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstallInterfaceController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +159,9 @@
 				4F8B3422201BD09300566936 /* Interface.storyboard */,
 				4F8B3425201BD09300566936 /* Assets.xcassets */,
 				4F8B3427201BD09300566936 /* Info.plist */,
+				4F8B344B201BEC4C00566936 /* InstallInterfaceController.h */,
+				4F8B344C201BEC4C00566936 /* InstallInterfaceController.m */,
+				4F359B1D201D6E8500AC6097 /* PackageDetails.storyboard */,
 			);
 			path = "Chronos WatchKit App";
 			sourceTree = "<group>";
@@ -159,6 +169,7 @@
 		4F8B3430201BD09300566936 /* Chronos WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				4F359B1A201D686D00AC6097 /* Settings-Watch.bundle */,
 				4F8B3431201BD09300566936 /* InterfaceController.h */,
 				4F8B3432201BD09300566936 /* InterfaceController.m */,
 				4F8B3434201BD09300566936 /* ExtensionDelegate.h */,
@@ -288,6 +299,8 @@
 			files = (
 				4F8B3426201BD09300566936 /* Assets.xcassets in Resources */,
 				4F8B3424201BD09300566936 /* Interface.storyboard in Resources */,
+				4F359B1E201D6E8500AC6097 /* PackageDetails.storyboard in Resources */,
+				4F359B1B201D686D00AC6097 /* Settings-Watch.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,6 +308,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F359B1C201D686D00AC6097 /* Settings-Watch.bundle in Resources */,
 				4F8B343B201BD09300566936 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -474,6 +488,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Chronos WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tk.ethanrdoesmc.Chronos.watchkitapp.watchkitextension;
@@ -490,6 +505,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Chronos WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tk.ethanrdoesmc.Chronos.watchkitapp.watchkitextension;
@@ -506,6 +522,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				IBSC_MODULE = Chronos_WatchKit_Extension;
 				INFOPLIST_FILE = "Chronos WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = tk.ethanrdoesmc.Chronos.watchkitapp;
@@ -513,7 +530,7 @@
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
 		};
@@ -522,6 +539,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				IBSC_MODULE = Chronos_WatchKit_Extension;
 				INFOPLIST_FILE = "Chronos WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = tk.ethanrdoesmc.Chronos.watchkitapp;
@@ -529,7 +547,7 @@
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
@@ -538,7 +556,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Chronos/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tk.ethanrdoesmc.Chronos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -551,7 +571,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Chronos/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tk.ethanrdoesmc.Chronos;
 				PRODUCT_NAME = "$(TARGET_NAME)";

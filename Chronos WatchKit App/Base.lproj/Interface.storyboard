@@ -1,16 +1,136 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="13771" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="iRm-Md-LQK">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11055"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13756"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--NASA-->
+        <scene sceneID="Cjd-5J-eVM">
+            <objects>
+                <controllerPlaceholder referencedIdentifier="NASA" id="SYg-xl-jzD"/>
+            </objects>
+            <point key="canvasLocation" x="102" y="-95"/>
+        </scene>
+        <!--Menu-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider=""/>
+                <controller title="Menu" alwaysBounce="YES" fullScreen="YES" id="AgC-eL-Hgc" customClass="InterfaceController">
+                    <items>
+                        <button width="1" alignment="left" title="Home" id="Vxi-VT-uQu">
+                            <connections>
+                                <segue destination="iRm-Md-LQK" kind="modal" id="kSt-th-cMX"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Browse" id="EDn-Re-eEH">
+                            <connections>
+                                <segue destination="SYg-xl-jzD" kind="modal" identifier="nasa" id="daU-JI-QME"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Installed" id="hip-Zh-vEo"/>
+                        <button width="1" alignment="left" title="Companion" id="GIp-5T-3Bt"/>
+                    </items>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="345"/>
+            <point key="canvasLocation" x="430" y="8"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="Vht-Eu-cED">
+            <objects>
+                <controller id="QS9-IO-aUZ">
+                    <items>
+                        <button width="1" alignment="left" title="Test Install Ring" id="snP-cr-WMR">
+                            <connections>
+                                <segue destination="Sbj-ci-6MD" kind="modal" id="TXu-wH-9Ci"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="808" y="-207"/>
+        </scene>
+        <!--Install-->
+        <scene sceneID="zPg-Xe-jUr">
+            <objects>
+                <controller identifier="InstallView" title="Install" fullScreen="YES" id="Sbj-ci-6MD">
+                    <items>
+                        <button width="1" alignment="left" title="Test" id="Wyp-uA-6An">
+                            <connections>
+                                <action selector="TestButtonPressed" destination="Sbj-ci-6MD" id="ieX-iV-sAh"/>
+                            </connections>
+                        </button>
+                        <activity alignment="left" id="Qvv-FD-JiB"/>
+                    </items>
+                    <connections>
+                        <outlet property="installRing" destination="Qvv-FD-JiB" id="ggs-hg-Qcm"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="673" y="325"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="B1e-fO-5vs">
+            <objects>
+                <controller id="Guj-uu-lxr">
+                    <items>
+                        <spriteKitScene alignment="left" id="G6Z-6i-rPG"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="808" y="691"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="vhl-G7-Xpz">
+            <objects>
+                <controller identifier="Home" title="Home" contentMode="scaleAspectFit" fullScreen="YES" id="iRm-Md-LQK">
+                    <items>
+                        <label alignment="left" text="Welcome to Chronos" id="fJI-uW-D9b">
+                            <variation key="device=watch38mm">
+                                <fontDescription key="font" type="system" pointSize="13"/>
+                            </variation>
+                        </label>
+                        <separator alignment="left" id="603-3L-AKu"/>
+                        <imageView width="1" height="103" alignment="left" image="Chronos1024" contentMode="scaleAspectFit" animationDuration="5" id="WvV-u5-nRo"/>
+                        <button width="1" alignment="left" verticalAlignment="bottom" title="Menu" id="RGl-DK-LZc">
+                            <connections>
+                                <segue destination="AgC-eL-Hgc" kind="modal" identifier="HomeMenuToMenu" id="SAs-aQ-6WC"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <segue destination="Ntx-Dv-Gpe" kind="relationship" relationship="nextPage" id="DuE-g0-z6m"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="71" y="248"/>
+        </scene>
+        <!--News-->
+        <scene sceneID="cJL-Ux-lqT">
+            <objects>
+                <controller identifier="News" title="News" alwaysBounce="YES" fullScreen="YES" id="Ntx-Dv-Gpe">
+                    <items>
+                        <label alignment="center" verticalAlignment="center" text="Coming Soon" id="uNA-ZB-l6p"/>
+                    </items>
+                    <connections>
+                        <segue destination="hVB-Ri-MVK" kind="relationship" relationship="nextPage" id="Dz0-mi-N6Y"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-97" y="543"/>
+        </scene>
+        <!--FAQ-->
+        <scene sceneID="PAf-zd-yBn">
+            <objects>
+                <controller identifier="FAQ" title="FAQ" alwaysBounce="YES" fullScreen="YES" id="hVB-Ri-MVK">
+                    <items>
+                        <label alignment="center" verticalAlignment="center" text="Coming Soon" id="n7Y-OI-kvM"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="225" y="543"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -22,18 +142,18 @@
                     <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
                     <connections>
                         <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
-                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                        <segue destination="mPO-Ky-Wxt" kind="relationship" relationship="dynamicNotificationInterface" id="EGD-uI-HHe"/>
                     </connections>
                 </notificationController>
             </objects>
-            <point key="canvasLocation" x="220" y="643"/>
+            <point key="canvasLocation" x="164" y="1035"/>
         </scene>
         <!--Notification Controller-->
-        <scene sceneID="ZPc-GJ-vnh">
+        <scene sceneID="arr-RM-RUQ">
             <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModuleProvider=""/>
+                <controller id="mPO-Ky-Wxt" customClass="NotificationController"/>
             </objects>
-            <point key="canvasLocation" x="468" y="643"/>
+            <point key="canvasLocation" x="464" y="1035"/>
         </scene>
     </scenes>
 </document>
